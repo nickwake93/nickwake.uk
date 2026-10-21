@@ -12,7 +12,6 @@ test.describe("CV", () => {
 
   test("contact details link to the right places", async ({ cv }) => {
     const links = [
-      { name: "07824 553841", href: "tel:+447824553841" },
       { name: "nwake@hey.com", href: "mailto:nwake@hey.com" },
       {
         name: "linkedin.com/in/nick-wake",
@@ -54,7 +53,7 @@ test.describe("CV", () => {
         .getByRole("link")
         .evaluateAll((links) => links.map((link) => link.getAttribute("href")));
       expect(hrefs.length).toBeGreaterThan(0);
-      expect(hrefs.filter((href) => !/^(https:|mailto:|tel:)/.test(href ?? ""))).toEqual([]);
+      expect(hrefs.filter((href) => !/^(https:|mailto:)/.test(href ?? ""))).toEqual([]);
     });
   });
 });
