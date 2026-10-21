@@ -1,0 +1,29 @@
+{
+  "name": "nickwake-uk",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@fontsource/carlito": "5.2.8",
+    "@fontsource/questrial": "5.2.8",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
+    "eslint": "9.39.5",
+    "eslint-plugin-playwright": "2.2.1",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.64.0",
+    "wrangler": "4.112.0"
+  }
+}

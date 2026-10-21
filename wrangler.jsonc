@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // A static site: Cloudflare serves dist/ directly, with no Worker code.
+  "name": "nickwake-uk",
+  "compatibility_date": "2025-09-24",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+  "routes": [{ "pattern": "nickwake.uk", "custom_domain": true }],
+  // One public address: the custom domain, not also a workers.dev one.
+  "workers_dev": false,
+}

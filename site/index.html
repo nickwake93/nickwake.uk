@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nick Wake · Senior QA Engineer</title>
+    <meta
+      name="description"
+      content="Senior QA Engineer focused on scalable test automation for web and APIs. CV, GitHub and a featured test engineering project."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="intro">
+        <h1 class="name">Nick Wake</h1>
+        <p class="role">Senior QA Engineer</p>
+        <p class="summary">
+          I build scalable test automation for web apps and APIs, and embed it in CI/CD so teams can
+          release faster and with confidence. I work mostly with Playwright, along with Cypress,
+          Selenium, Postman and JMeter.
+        </p>
+        <nav aria-label="Profile links">
+          <ul class="links">
+            <li><a class="button primary" href="cv/">View my CV</a></li>
+            <li>
+              <a class="button" href="nick-wake-cv.pdf" download>Download CV (PDF)</a>
+            </li>
+            <li>
+              <a class="button" href="https://github.com/nickwake93">GitHub</a>
+            </li>
+            <li>
+              <a class="button" href="https://www.linkedin.com/in/nick-wake">LinkedIn</a>
+            </li>
+            <li>
+              <a class="button" href="mailto:nwake@hey.com">nwake@hey.com</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="project" aria-labelledby="project-title">
+        <p class="eyebrow">Featured project</p>
+        <h2 id="project-title">Nature Frames</h2>
+        <p>
+          A photography site built with an AI app builder, and the Playwright framework I designed
+          to test it: UI, API, accessibility and responsive tests across three browser engines and
+          two phones, run in GitHub Actions on every change.
+        </p>
+        <p>
+          The tests found 16 real issues, from a hydration race that failed a third of test runs to
+          photos leaking GPS coordinates. Every change is deployed to Cloudflare and smoke-tested in
+          production.
+        </p>
+        <ul class="links" aria-label="Nature Frames links">
+          <li>
+            <a class="button primary" href="https://photos.nickwake.uk">Live site</a>
+          </li>
+          <li>
+            <a class="button" href="https://github.com/nickwake93/nature-frames-qa"
+              >Code and tests</a
+            >
+          </li>
+          <li>
+            <a class="button" href="https://nickwake93.github.io/nature-frames-qa/main/"
+              >Latest test report</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        This site is tested too:
+        <a href="https://github.com/nickwake93/nickwake.uk">see its code and tests on GitHub</a>.
+      </p>
+    </footer>
+  </body>
+</html>
