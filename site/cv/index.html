@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nick Wake · CV</title>
+    <meta
+      name="description"
+      content="CV of Nick Wake, Senior QA Engineer: test automation with Playwright, Cypress, Selenium, Postman and JMeter."
+    />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <!-- Hidden in print, so it's not in the PDF. Every link that is printed is absolute. -->
+    <nav class="toolbar" aria-label="CV actions">
+      <a href="../">← nickwake.uk</a>
+      <a class="button" href="../nick-wake-cv.pdf" download>Download PDF</a>
+    </nav>
+
+    <main class="cv">
+      <header class="cv-header">
+        <div>
+          <h1 class="name">Nick Wake</h1>
+          <p class="role">Senior QA Engineer</p>
+        </div>
+        <ul class="contact" aria-label="Contact details">
+          <li>Cheltenham</li>
+          <li><a href="mailto:nwake@hey.com">nwake@hey.com</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/nick-wake">linkedin.com/in/nick-wake</a>
+          </li>
+          <li><a href="https://nickwake.uk">nickwake.uk</a></li>
+        </ul>
+      </header>
+
+      <p class="summary">
+        Senior QA Engineer with a focus on scalable test automation for web and APIs. Delivered
+        faster, more reliable releases by improving test performance, reducing flakiness, and
+        embedding automation into CI/CD pipelines. Skilled in Playwright, Cypress, Selenium,
+        Postman, and JMeter, with experience leading automation initiatives and raising overall
+        engineering quality standards.
+      </p>
+
+      <section aria-labelledby="skills">
+        <h2 id="skills">Skills</h2>
+        <div class="skills">
+          <div>
+            <h3>Technical</h3>
+            <ul>
+              <li>E2E testing with Cypress, Playwright, and Selenium</li>
+              <li>API testing using Postman</li>
+              <li>Performance testing with JMeter</li>
+              <li>Strong understanding of test automation strategy</li>
+              <li>CI/CD pipeline setup with GitHub Actions</li>
+              <li>Knowledge of great product design principles</li>
+              <li>Proficient in Git flow</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Personal</h3>
+            <ul>
+              <li>Approachable personality</li>
+              <li>Innovative and creative</li>
+              <li>Excellent verbal and written communication</li>
+              <li>Meticulous, with a good eye for detail</li>
+              <li>A willingness to learn and cross-skill</li>
+              <li>Calm under pressure</li>
+              <li>Natural problem solver</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
+        <article class="entry">
+          <p class="when">2026</p>
+          <div>
+            <h3>Nature Frames: a test engineering portfolio</h3>
+            <p class="where">
+              <a href="https://photos.nickwake.uk">photos.nickwake.uk</a>
+            </p>
+            <ul>
+              <li>
+                Designed a Playwright framework (page objects, fixtures, API helpers) for an
+                AI-generated web app, covering UI, API, axe accessibility and responsive tests
+                across three browser engines and two phones.
+              </li>
+              <li>
+                Found and fixed 16 real issues, including a hydration race that failed a third of
+                test runs and photos leaking GPS coordinates.
+              </li>
+              <li>
+                Built the GitHub Actions pipeline: static checks, a smoke-test gate, the full suite,
+                deployment to Cloudflare, then smoke tests against production, with every report
+                hosted on GitHub Pages.
+              </li>
+              <li>
+                Code and tests:
+                <a href="https://github.com/nickwake93/nature-frames-qa"
+                  >github.com/nickwake93/nature-frames-qa</a
+                >
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section aria-labelledby="work">
+        <h2 id="work">Work History</h2>
+
+        <article class="entry">
+          <p class="when">Aug ’22 – present</p>
+          <div>
+            <h3>Senior QA Engineer</h3>
+            <p class="where">Shieldpay</p>
+            <ul>
+              <li>
+                Built and maintained a daily Playwright E2E test suite to catch regressions in the
+                integration environment and in staging during releases.
+              </li>
+              <li>
+                Supported the UI team with Playwright component tests, allowing components to be
+                tested in a real browser.
+              </li>
+              <li>
+                Added screenshot-based regression testing in Playwright to detect layout and visual
+                changes.
+              </li>
+              <li>
+                Created a Google Looker report to track nightly Playwright test results over time,
+                with links to individual HTML reports.
+              </li>
+              <li>
+                Migrated the E2E test suite from Cypress to Playwright to improve test performance
+                and reliability.
+              </li>
+              <li>
+                Led the introduction of API testing for one of the products using Postman and
+                Newman.
+              </li>
+              <li>
+                Recorded training videos for customers and internal teams covering product and API
+                usage.
+              </li>
+              <li>Carried out UI and API performance testing using Postman and JMeter.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Feb ’21 – Jul ’22</p>
+          <div>
+            <h3>Test Engineer</h3>
+            <p class="where">thinkproject</p>
+            <ul>
+              <li>
+                Creating, maintaining, and owning a repository of Selenium tests, written in C#,
+                using Specflow and Gherkin, that run nightly in an Azure pipeline.
+              </li>
+              <li>
+                Setting up API integration tests via Postman that run in a microservice pipeline
+                every time a pull request is submitted.
+              </li>
+              <li>
+                Solely putting together Load Tests in JMeter that run fortnightly and automatically
+                output their results to a Sharepoint location.
+              </li>
+              <li>
+                Following all Agile practices such as daily stand-ups, sprint planning, reviews and
+                retrospectives.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Sep ’19 – Feb ’21</p>
+          <div>
+            <h3>QA Test Analyst</h3>
+            <p class="where">PSI Services</p>
+            <ul>
+              <li>
+                Creating and owning a Selenium suite written in C#, using SpecFlow, as well as a
+                standalone Appium test pack.
+              </li>
+              <li>
+                Collaborated with developers and product owners to stay current on product features
+                and intended functionality.
+              </li>
+              <li>
+                Creating automated Postman tests in Javascript that run daily in an Azure DevOps
+                pipeline.
+              </li>
+              <li>Manually testing changes for 2 web-based products and one mobile app.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Jun ’19 – Sep ’19</p>
+          <div>
+            <h3>Test Analyst</h3>
+            <p class="where">XQ Cyber</p>
+            <ul>
+              <li>Creating, editing and fixing Behat automation tests.</li>
+              <li>Being comfortable with PHP to read through code changes in pull requests.</li>
+              <li>Using BrowserStack for cross-browser and cross-OS testing.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Jul ’18 – Jun ’19</p>
+          <div>
+            <h3>QA Engineer</h3>
+            <p class="where">Volo</p>
+            <ul>
+              <li>Making use of Cypher to query data stored in a Neo4j graph database.</li>
+              <li>Adding new Selenium UI integration tests.</li>
+              <li>Create wire-frames on Figma with Product Owners to design UI pages.</li>
+              <li>Working with UI Developers to add new functionality to internal tools.</li>
+              <li>Using Docker to make services transferable across operating systems.</li>
+              <li>Analysing outputs given by Jenkins log files to assess the cause of failures.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Jan ’17 – Jul ’18</p>
+          <div>
+            <h3>Technical Support Analyst</h3>
+            <p class="where">Volo</p>
+            <ul>
+              <li>
+                Managed personal workload, prioritising cases while managing customers’
+                expectations.
+              </li>
+              <li>
+                Built a strong relationship with all departments within the company to ensure that
+                the customer’s experience is as seamless as possible, while building upon my own
+                knowledge.
+              </li>
+              <li>
+                Generating SQL queries to pull specific information based on a customer’s request.
+              </li>
+              <li>
+                Amending HTML to make cosmetic changes for customers’ websites and eBay listings.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Jul ’16 – Dec ’16</p>
+          <div>
+            <h3>Careers Consultant</h3>
+            <p class="where">CleverHR</p>
+            <ul>
+              <li>
+                Engaging with employers and applicants to understand their needs and requirements.
+              </li>
+              <li>
+                Administer company social media pages, posting daily and engaging content to
+                potential clients.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Oct ’14 – Jun ’16</p>
+          <div>
+            <h3>Real Time Analyst</h3>
+            <p class="where">Diligenta</p>
+            <ul>
+              <li>
+                Provide in-depth analysis and management reports for Team Leaders and Executive
+                Managers.
+              </li>
+              <li>
+                Identify, monitor and manage all risks to targets and report these to the relevant
+                individuals.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Jan ’14 – Oct ’14</p>
+          <div>
+            <h3>Customer Service Representative</h3>
+            <p class="where">Diligenta</p>
+            <ul>
+              <li>Dealing with customer demands in a professional, courteous manner.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="qualifications" aria-labelledby="qualifications">
+        <h2 id="qualifications">Qualifications</h2>
+        <h3>Professional qualifications</h3>
+        <ul>
+          <li>
+            ISTQB Certified Tester Foundation Level Certificate
+            <span class="date">(Nov ’18)</span>
+          </li>
+        </ul>
+        <h3>Academic qualifications</h3>
+        <p>
+          Chipping Sodbury Sixth Form: A-Levels
+          <span class="date">(Jul ’12)</span>
+        </p>
+        <ul>
+          <li>Business BTEC (Distinction)</li>
+          <li>Additional Business BTEC (Distinction)</li>
+          <li>ICT (D)</li>
+        </ul>
+        <p>Chipping Sodbury School: GCSEs <span class="date">(Jul ’10)</span></p>
+        <ul>
+          <li>8 A*-C grades including Maths, English and Science</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

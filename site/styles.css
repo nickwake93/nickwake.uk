@@ -1,0 +1,387 @@
+/* Fonts are self-hosted (copied in by scripts/build.mjs) so the site and the generated PDF
+   look the same everywhere. Carlito matches Calibri's metrics; Questrial is close to the
+   Century Gothic used for the name on the Word CV. Paths are relative so the CV also
+   renders from a file:// URL when the PDF is generated. */
+@font-face {
+  font-family: "Carlito";
+  src: url("fonts/carlito-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Carlito";
+  src: url("fonts/carlito-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Carlito";
+  src: url("fonts/carlito-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Questrial";
+  src: url("fonts/questrial-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --surface: #f3f7f6;
+  --text: #1d2524;
+  --muted: #55625f;
+  --teal: #5f8f8d; /* the Word CV's teal: name and rules, large or decorative only */
+  --accent: #33605e; /* darker teal for text and links, 7:1 on white */
+  --border: #d5e0de;
+  --font-body: "Carlito", Calibri, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Questrial", "Century Gothic", "Avenir Next", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111615;
+    --surface: #1a2120;
+    --text: #e4ebe9;
+    --muted: #a3b1ae;
+    --teal: #8dbfbc;
+    --accent: #a6d4d1;
+    --border: #2c3836;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 1.125rem/1.55 var(--font-body);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+
+.name {
+  margin: 0;
+  font: 400 clamp(2.75rem, 9vw, 4.25rem) / 1.05 var(--font-display);
+  color: var(--teal);
+  letter-spacing: 0.01em;
+}
+
+.role {
+  margin: 0.25rem 0 0;
+  font: 400 clamp(1.5rem, 4.5vw, 2rem) / 1.2 var(--font-display);
+  color: var(--accent);
+}
+
+/* ---------- Landing page ---------- */
+
+.intro .summary {
+  margin: 1.5rem 0 2rem;
+  max-width: 38rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.button.primary:hover {
+  color: var(--bg);
+  opacity: 0.9;
+}
+
+.project {
+  margin-top: 3.5rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project h2 {
+  margin: 0.25rem 0 0.75rem;
+  font: 400 1.9rem/1.2 var(--font-display);
+}
+
+.project p {
+  margin: 0 0 1rem;
+}
+
+.project .links {
+  margin-top: 1.25rem;
+}
+
+.site-footer {
+  padding: 2rem 1.25rem 3rem;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* ---------- CV ---------- */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 0;
+}
+
+.cv {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  font-size: 1.0625rem;
+}
+
+.cv-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+}
+
+.contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.7;
+}
+
+.cv .summary {
+  margin: 1.75rem 0 0;
+}
+
+.cv h2 {
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 3px solid var(--teal);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.cv h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.cv ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.5rem 2rem;
+}
+
+.skills h3 {
+  font-weight: 400;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0 1rem;
+  margin-top: 1rem;
+}
+
+/* A job can run onto the next page, but never splits from its title. */
+.entry h3,
+.entry .where {
+  break-after: avoid;
+}
+
+.entry li {
+  break-inside: avoid;
+}
+
+.entry .when {
+  margin: 0;
+  color: var(--muted);
+}
+
+.entry .where {
+  margin: 0;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.qualifications h3 {
+  margin-top: 0.75rem;
+  font-weight: 400;
+}
+
+.qualifications p {
+  margin: 0.5rem 0 0;
+}
+
+.date {
+  color: var(--muted);
+}
+
+@media (max-width: 34rem) {
+  .entry {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 404 ---------- */
+
+.not-found {
+  text-align: center;
+  padding-top: 6rem;
+}
+
+/* ---------- Print and PDF ---------- */
+
+@page {
+  size: A4;
+  margin: 11mm 15mm;
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --text: #1d2524;
+    --muted: #55625f;
+    --teal: #5f8f8d;
+    --accent: #33605e;
+    --border: #d5e0de;
+  }
+
+  body {
+    font-size: 10pt;
+    line-height: 1.27;
+  }
+
+  .toolbar {
+    display: none;
+  }
+
+  .cv {
+    max-width: none;
+    padding: 0;
+    font-size: 10pt;
+  }
+
+  .contact {
+    line-height: 1.5;
+  }
+
+  .cv ul {
+    margin-top: 0.15rem;
+  }
+
+  .name {
+    font-size: 34pt;
+  }
+
+  .role {
+    font-size: 17pt;
+  }
+
+  .cv .summary {
+    margin-top: 1rem;
+  }
+
+  .cv h2 {
+    margin-top: 0.9rem;
+    margin-bottom: 0.4rem;
+    font-size: 14pt;
+    break-after: avoid;
+  }
+
+  .cv h3 {
+    font-size: 10pt;
+  }
+
+  .entry {
+    grid-template-columns: 6.75rem 1fr;
+    margin-top: 0.4rem;
+  }
+
+  .entry .when {
+    white-space: nowrap;
+  }
+
+  .skills {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
