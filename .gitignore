@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.wrangler/
+test-results/
+playwright-report/
+.DS_Store
+# CV source documents live outside the repo; the site's PDF is generated from the HTML.
+*.docx
