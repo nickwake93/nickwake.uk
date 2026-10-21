@@ -20,7 +20,11 @@ test.describe("Responses", () => {
       const res = await request.get(path);
       expect(res.status()).toBe(200);
       const headers = res.headers();
-      expect(headers["content-security-policy"]).toContain("script-src 'none'");
+      // The site has no scripts of its own; the only one allowed is Cloudflare Web Analytics,
+      // which Cloudflare adds to pages as it serves them.
+      expect(headers["content-security-policy"]).toContain(
+        "script-src https://static.cloudflareinsights.com;",
+      );
       expect(headers["content-security-policy"]).toContain("frame-ancestors 'none'");
       expect(headers["x-content-type-options"]).toBe("nosniff");
       expect(headers["referrer-policy"]).toBe("strict-origin-when-cross-origin");

@@ -8,7 +8,8 @@ Personal site: a landing page and an HTML CV, with the PDF version generated fro
 - **`/nick-wake-cv.pdf`**: generated from `/cv/` by Playwright (`page.pdf()`) at build time, so the
   web and PDF versions can never drift apart.
 
-Plain HTML and CSS, no framework and no JavaScript. Served as static assets by Cloudflare.
+Plain HTML and CSS, with no framework and no JavaScript of its own. Served as static assets by
+Cloudflare, which adds its cookie-free Web Analytics script; the CSP allows that and nothing else.
 
 ## Layout
 
